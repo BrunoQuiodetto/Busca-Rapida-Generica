@@ -1,0 +1,154 @@
+#header_produto_colunas{
+    position: sticky; 
+    top:0px; 
+    background:#bbb; 
+    z-index:8; 
+    border-top-left-radius:4px; 
+    border-top-right-radius:4px;
+}
+
+#buscaClientesTitulo{
+    border-top-left-radius:4px; 
+    border-top-right-radius:4px; 
+    position: sticky; 
+    top: -15px;
+}
+
+.navbar{
+    height: 2.5em;
+}
+.navbar-brand{
+    font-size:14px !important; 
+    text-transform:uppercase; 
+    color:#eee !important;
+}
+
+#iBusca{
+    width:90%; 
+    height:1.9em; 
+    color:#777 !important; 
+    padding-left:5px; 
+    text-transform:uppercase; 
+    background: #eee url(../../../img/busca.png) no-repeat 1px 2px; 
+	background-size: 21px 22px; 
+    padding-left:26px;
+}
+
+.prodlines:nth-of-type(even){
+    background-color: #00000029;
+}
+.prodlines:nth-of-type(odd){
+    background-color: #eee;
+}
+
+.fb{font-size: 16px;}
+
+.table{
+    --bs-table-hover-bg: #fff3cd !important;
+}
+
+.procuraClientesButton{height: 30px;}
+
+.number-input input[type=number]::-webkit-inner-spin-button,
+.number-input input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.number-input button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+    text-align: center;
+}
+
+.number-input.number-input {
+    border: 1px solid #00000029;
+    width: 10rem;
+    border-radius: .25rem;
+}
+
+.number-input.number-input button {
+    width: 2.6rem;
+    height: .7rem;
+}
+
+.number-input.number-input button.minus {
+    padding-left: 10px;
+}
+
+.number-input.number-input button:before,
+.number-input.number-input button:after {
+    width: .7rem;
+    background-color: #495057;
+}
+
+.number-input.number-input input[type=number] {
+    max-width: 4rem;
+    padding: .5rem;
+    border: 1px solid #ced4da;
+    border-width: 0 1px;
+    font-size: 1rem;
+    height: 2rem;
+    color: #495057;
+}
+
+.input-money{
+	transition: all .25s ease-out;
+	&:focus {
+	  border-color: rgba(0,0,200,.4);
+	  box-shadow: 0 4px 24px -4px rgba(0,0,0,.4);
+	}
+}
+
+.img-thumbnail{
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 665px) {
+	.navbar-brand{
+		font-size: 10px !important;
+	}
+}
+
+@media (max-width: 100px){
+	h5{font-size: 0.8rem !important; font-weight:600 !important;}
+}
+
+@media (max-width: 1000px){
+	.number-input button.minus {
+		padding-left: 5px !important;
+	}
+	.number-input button {
+		width: 1rem !important;
+		height: .7rem !important;
+	}
+	.number-input input[type="number"]{
+		max-width: 3rem !important;
+	}
+	.number-input{width: 6rem !important;}
+	.navbar-brand{margin-right:5px !important; font-size: 10px !important;}
+	.fb{font-size: 11px !important;}
+	#header_produto_colunas{flex-wrap: wrap;}
+}

@@ -36,7 +36,7 @@ Esta função possibilita a filtragem de conteúdo dos elementos filhos utilizan
 
 * **Placeholder** O valor nele inserido serve para melhor identificação da função do elemento.
 * **Data-corpo** Este valor é o `ID` do nosso [elemento procurado](#elemento-de-busca).
-* **Onkeyup** A execução função é definida para após uma tecla ser apertada, assim atualizando o valor de forma dinamica.
+* **Onkeyup** A execução função é definida para acontecer após uma tecla ser apertada, assim atualizando o valor de forma dinamica.
 
 Exemplo:
 ```html
@@ -44,6 +44,7 @@ Exemplo:
 ```
 -------------------------------------------------------------------------------
 ## Elemento de Busca
+* **Id** O ID do elemento que contém o conteudo a ser filtrado deve ser exatamente igual ao atributo data-corpo do [elemento de disparo](#elemento-de-disparo).
 
 Exemplo:
 ```html

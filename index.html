@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="conf/index.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1></h1>
@@ -55,35 +52,36 @@
             </table>
         </div>
     </div>
+    
     <div class="container d-flex flex-column p-0">
-		<!-- titulos das colunas -->
+        <!-- titulos das colunas -->
 		<nav class="navbar navbar-expand-sm navbar-light" id="header_produto_colunas">
-			<div class="container justify-content-center p-0">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 container justify-content-around p-0 flex-row">
-					<li class="nav-item col-1 d-flex">
-						<span id="header_produto_colunas_sp0" class="navbar-brand"> imagem 	   </span>
+            <div class="container justify-content-center p-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 container justify-content-around p-0 flex-row">
+                    <li class="nav-item col-1 d-flex">
+                        <span id="header_produto_colunas_sp0" class="navbar-brand"> imagem 	   </span>
 					</li>
 					<li class="nav-item col-1">
-						<div class="d-flex">
-							<span id="header_produto_colunas_sp1" data-corpo="produtosLinhas" class="navbar-brand" data-value="acod"> produto 	   </span>
+                        <div class="d-flex">
+                            <span id="header_produto_colunas_sp1" data-corpo="produtosLinhas" class="navbar-brand" data-value="acod"> produto 	   </span>
 						</div>
 					</li>
 					<li class="nav-item col-1">
-						<div class="d-flex">
-							<span id="header_produto_colunas_sp2" data-corpo="produtosLinhas" class="navbar-brand" data-value="adesc"> descrição   </span>
+                        <div class="d-flex">
+                            <span id="header_produto_colunas_sp2" data-corpo="produtosLinhas" class="navbar-brand" data-value="adesc"> descrição   </span>
 						</div>
 					</li>
 					<li class="nav-item col-md-3 col-1" style="text-align: -webkit-center;">
-						<input type="text" class="form-control navbar-brand" name="iBusca" id="iBusca" onkeyup="buscaRapida($(this),'div[id^=produtosLinhas]')" data-corpo="produtosLinhas" placeholder="BUSCA RÁPIDA">
+                        <input type="text" class="form-control navbar-brand" name="iBusca" id="iBusca" onkeyup="buscaRapida($(this),'div[id^=produtosLinhas]')" data-corpo="produtosLinhas" placeholder="BUSCA RÁPIDA">
 					</li>
 					<li class="nav-item col-1 me-3">
 						<div class="d-flex">
-							<span id="header_produto_colunas_sp3" data-corpo="produtosLinhas" class="navbar-brand" data-value="aqtd"> quantidade  </span>
+                            <span id="header_produto_colunas_sp3" data-corpo="produtosLinhas" class="navbar-brand" data-value="aqtd"> quantidade  </span>
 						</div>
 					</li>
 					<li class="nav-item col-1">
-						<div class="d-flex">
-							<span id="header_produto_colunas_sp5" data-corpo="produtosLinhas" class="navbar-brand" data-value="atbla"> tabela  		</span>
+                        <div class="d-flex">
+                            <span id="header_produto_colunas_sp5" data-corpo="produtosLinhas" class="navbar-brand" data-value="atbla"> tabela  		</span>
 						</div>
 					</li>
 				</ul>
@@ -96,81 +94,81 @@
                 <div id="produtosLinhas0" class="prodlines row">
                     <span class="col mt-2 mb-2">
                         <a href="img/02006002113.jpeg" target="_blank" >
-                        <div id="image-product">
-                            <img src="img/02006002113.jpeg" alt=""  class="img-thumbnail">               </div>
-                        </a>
-                    </span>
+                            <div id="image-product">
+                                <img src="img/02006002113.jpeg" alt=""  class="img-thumbnail">               </div>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="col form-label align-self-center">02006002113</span>
+                        
+                        
+                        <span class="col-lg-4 col-sm-3 form-label align-self-center">GON FREECSS FUNKO POP</span>
+                        
+                        
+                        <span class="col align-self-center">
+                            <div class="def-number-input number-input">
+                                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
+                                <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
+                                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
+                            </div>
+                        </span>
+                        
+                        <span class="col align-self-center">
+                            <input type="text" name="precotabela[]" id="precotabela0" value="R$ 140,00" class="text3 form-control readonly" readonly="">
+                        </span>
+                    </div>
+                    
+                    <div id="produtosLinhas1" class="prodlines row">
+                        <span class="col mt-2 mb-2">
+                            <a href="img/02006002114.jpg" target="_blank" >
+                                <div id="image-product">
+                                    <img src="img/02006002114.jpg" alt=""  class="img-thumbnail">               
+                                </div>
+                            </a>
+                        </span>
 
                     
-                    <span class="col form-label align-self-center">02006002113</span>
+                        <span class="col form-label align-self-center">02006002114</span>
 
-                    
-                    <span class="col-lg-4 col-sm-3 form-label align-self-center">GON FREECSS FUNKO POP</span>
+                        
+                        <span class="col-lg-4 col-sm-3 form-label align-self-center">NETERO FUNKO POP</span>
+                        
+                        
+                        <span class="col align-self-center">
+                            <div class="def-number-input number-input">
+                                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
+                                <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
+                                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
+                            </div>
+                        </span>
+                        
+                        <span class="col align-self-center">
+                            <input type="text" name="precotabela[]" id="precotabela0" value="R$ 140,00" class="text3 form-control readonly" readonly="">
+                        </span>
+                    </div>
 
-                    
-                    <span class="col align-self-center">
-                        <div class="def-number-input number-input">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
-                        <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
-                        </div>
-                    </span>
-                    
-                    <span class="col align-self-center">
-                        <input type="text" name="precotabela[]" id="precotabela0" value="R$ 140,00" class="text3 form-control readonly" readonly="">
-                    </span>
-                </div>
-
-                <div id="produtosLinhas1" class="prodlines row">
-                    <span class="col mt-2 mb-2">
-                        <a href="img/02006002114.jpg" target="_blank" >
-                        <div id="image-product">
-                            <img src="img/02006002114.jpg" alt=""  class="img-thumbnail">               
-                        </div>
-                        </a>
-                    </span>
-
-                    
-                    <span class="col form-label align-self-center">02006002114</span>
-
-                    
-                    <span class="col-lg-4 col-sm-3 form-label align-self-center">NETERO FUNKO POP</span>
-
-                    
-                    <span class="col align-self-center">
-                        <div class="def-number-input number-input">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
-                        <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
-                        </div>
-                    </span>
-                    
-                    <span class="col align-self-center">
-                        <input type="text" name="precotabela[]" id="precotabela0" value="R$ 140,00" class="text3 form-control readonly" readonly="">
-                    </span>
-                </div>
-
-                <div id="produtosLinhas2" class="prodlines row">
-                    <span class="col mt-2 mb-2">
-                        <a href="img/02006002115.jpeg" target="_blank" >
+                    <div id="produtosLinhas2" class="prodlines row">
+                        <span class="col mt-2 mb-2">
+                            <a href="img/02006002115.jpeg" target="_blank" >
                         <div id="image-product">
                             <img src="img/02006002115.jpeg" alt=""  class="img-thumbnail">               
                         </div>
-                        </a>
-                    </span>
+                    </a>
+                </span>
 
-                    
+                
                     <span class="col form-label align-self-center">02006002115</span>
-
+                    
                     
                     <span class="col-lg-4 col-sm-3 form-label align-self-center">KURAPIKA FUNKO POP</span>
-
+                    
                     
                     <span class="col align-self-center">
                         <div class="def-number-input number-input">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
-                        <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
+                            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
+                            <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
+                            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
                         </div>
                     </span>
                     
@@ -182,31 +180,31 @@
                 <div id="produtosLinhas3" class="prodlines row">
                     <span class="col mt-2 mb-2">
                         <a href="img/02009000006.jpg" target="_blank" >
-                        <div id="image-product">
-                            <img src="img/02009000006.jpg" alt=""  class="img-thumbnail">               </div>
-                        </a>
-                    </span>
-
-                    
-                    <span class="col form-label align-self-center">02009000006</span>
-
-                    
-                    <span class="col-lg-4 col-sm-3 form-label align-self-center">GON FREECSS ADULT FORM</span>
-
-                    
-                    <span class="col align-self-center">
-                        <div class="def-number-input number-input">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
-                        <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
-                        </div>
-                    </span>
-                    
-                    <span class="col align-self-center">
-                        <input type="text" name="precotabela[]" id="precotabela0" value="R$ 700,00" class="text3 form-control readonly" readonly="">
-                    </span>
+                            <div id="image-product">
+                                <img src="img/02009000006.jpg" alt=""  class="img-thumbnail">               </div>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="col form-label align-self-center">02009000006</span>
+                        
+                        
+                        <span class="col-lg-4 col-sm-3 form-label align-self-center">GON FREECSS ADULT FORM</span>
+                        
+                        
+                        <span class="col align-self-center">
+                            <div class="def-number-input number-input">
+                                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
+                                <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
+                                <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
+                            </div>
+                        </span>
+                        
+                        <span class="col align-self-center">
+                            <input type="text" name="precotabela[]" id="precotabela0" value="R$ 700,00" class="text3 form-control readonly" readonly="">
+                        </span>
                 </div>
-
+                
                 <div id="produtosLinhas4" class="prodlines row">
                     <span class="col mt-2 mb-2">
                         <a href="img/02009000007.jpg" target="_blank" >
@@ -214,19 +212,19 @@
                             <img src="img/02009000007.jpg" alt=""  class="img-thumbnail">               </div>
                         </a>
                     </span>
-
+                    
                     
                     <span class="col form-label align-self-center">02009000007</span>
-
+                    
                     
                     <span class="col-lg-4 col-sm-3 form-label align-self-center">GON FREECSS FISHING</span>
-
+                    
                     
                     <span class="col align-self-center">
                         <div class="def-number-input number-input">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
-                        <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
-                        <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
+                            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val()); checa(0)" class="minus"></button>
+                            <input class="text1 quantity fw-bold bg-body-tertiary text-body" name="qtdprod[]" value="" type="number" maxlength="6" onkeypress="return SomenteNumero(event);" onclick="$(this).val(''); checa(0);" onblur="checa(0);" onchange="$(this).attr('value',$(this).val())" min="1">
+                            <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); $(this).siblings('input[type=number]').attr('value',$(this).siblings('input[type=number]').val())" class="plus"></button>
                         </div>
                     </span>
                     
@@ -237,19 +235,10 @@
             </div>
         </div>
 	</div>
-
-    <script>
-        function buscaRapida(e,f) {
-            var busca = $(e).val().toLowerCase();
-            var corpo = '#'+$(e).attr('data-corpo');
-            if ($(corpo).html().trim().length != 0){
-                $(corpo+" "+f).each(function(){
-                    var text = $(this).text().toLowerCase().trim();
-                    console.log($(this));
-                    (text.indexOf(busca) >= 0) ? $(this).show() : $(this).hide();
-                }); 
-            }
-        }
-    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="conf/script.js"></script>
 </body>
 </html>

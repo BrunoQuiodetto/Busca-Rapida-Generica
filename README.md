@@ -45,6 +45,9 @@ Exemplo:
 ```
 -------------------------------------------------------------------------------
 ## Elemento de Busca
+
+### Atributos
+
 * **Id** O ID do elemento que contém o conteudo a ser filtrado deve ser exatamente igual ao atributo data-corpo do [elemento de disparo](#elemento-de-disparo).
 
 Exemplo:

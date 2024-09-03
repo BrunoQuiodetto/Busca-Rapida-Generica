@@ -1,6 +1,6 @@
 # Busca Rápida
 
-Esta função possibilita a filtragem de conteúdo dos elementos filhos utilizando de parametros enviados tanto da chamada da função quanto do elemento que dispara.
+Através do estabelecimento de um padrão sobre os elementos, esta função possibilita a filtragem de conteúdo dos elementos filhos utilizando de parametros enviados tanto da chamada da função quanto do elemento que a dispara.
 
 -------------------------------------------------------------------------------
 ## Conteúdo
@@ -14,20 +14,21 @@ Esta função possibilita a filtragem de conteúdo dos elementos filhos utilizan
 
 #### Parametros
 
-* **[Elemento](#elemento-de-disparo)** Elemento que contém o valor que será procurado e também o atributo que referencia ao [elemento procurado](#elemento-de-busca).
+* **Elemento** [Elemento](#elemento-de-disparo) que contém o valor de busca e também o atributo que referencia ao [elemento procurado](#elemento-de-busca).
 * **Filho** Determina a classe de elemento que será filtrada no corpo de busca.
 
-```javascript jquery
-    function buscaRapida(e,f) {
-        var busca = $(e).val().toLowerCase(); // PADRONIZAÇÃO DO FORMATO PARA MELHOR IDENTIFICAÇÃO
-        var corpo = '#'+$(e).attr('data-corpo'); // DETERMINA AONDE SERÁ REALIZADA A FILTRAGEM
-        if ($(corpo).html().trim().length != 0){ // VERIFICA SE HÁ CONTEÚDO REAL
-            $(corpo+" "+f).each(function(){ // PERCORRE OS FILHOS PRESENTES NO CORPO
-                var text = $(this).text().toLowerCase().trim(); // PADRONIZA O FORMATO PARA MELHOR IDENTIFICAÇÃO (PROCURA EM TODOS OS ELEMENTOS DO FILHO SEM DISTINÇÃO)
-                (text.indexOf(busca) >= 0) ? $(this).show() : $(this).hide(); // ESCONDE O FILHO CASO NÃO HAJA CORRESPONDENCIA COM A BUSCA EM NENHUM MOMENTO
-            }); 
-        }
+```javascript
+//jQuery
+function buscaRapida(e,f) {
+    var busca = $(e).val().toLowerCase(); // PADRONIZAÇÃO DO FORMATO PARA MELHOR IDENTIFICAÇÃO
+    var corpo = '#'+$(e).attr('data-corpo'); // DETERMINA AONDE SERÁ REALIZADA A FILTRAGEM
+    if ($(corpo).html().trim().length != 0){ // VERIFICA SE HÁ CONTEÚDO REAL
+        $(corpo+" "+f).each(function(){ // PERCORRE OS FILHOS PRESENTES NO CORPO
+            var text = $(this).text().toLowerCase().trim(); // PADRONIZA O FORMATO PARA MELHOR IDENTIFICAÇÃO (PROCURA EM TODOS OS ELEMENTOS DO FILHO SEM DISTINÇÃO)
+            (text.indexOf(busca) >= 0) ? $(this).show() : $(this).hide(); // ESCONDE O FILHO CASO NÃO HAJA CORRESPONDENCIA COM A BUSCA EM NENHUM MOMENTO
+        }); 
     }
+}
 ```
 -------------------------------------------------------------------------------
 ## Elemento de Disparo
@@ -40,7 +41,7 @@ Esta função possibilita a filtragem de conteúdo dos elementos filhos utilizan
 
 Exemplo:
 ```html
-    <input type="text" placeholder="Busca Rapida" data-corpo="seqLetras" onkeyup="buscaRapida($(this),'tr')">
+<input type="text" placeholder="Busca Rapida" data-corpo="seqLetras" onkeyup="buscaRapida($(this),'tr')">
 ```
 -------------------------------------------------------------------------------
 ## Elemento de Busca
@@ -48,20 +49,20 @@ Exemplo:
 
 Exemplo:
 ```html
-    <table>
-        <tbody id="seqLetras">
-            <tr>
-                <td>AAABBBCCC</td>
-            </tr>
-            <tr>
-                <td>AAACCCBBB</td>
-            </tr>
-            <tr>
-                <td>CCCBBBAAA</td>
-            </tr>
-            <tr>
-                <td>CCCAAABBB</td>
-            </tr>
-        </tbody>
-    </table>
+<table>
+    <tbody id="seqLetras">
+        <tr>
+            <td>AAABBBCCC</td>
+        </tr>
+        <tr>
+            <td>AAACCCBBB</td>
+        </tr>
+        <tr>
+            <td>CCCBBBAAA</td>
+        </tr>
+        <tr>
+            <td>CCCAAABBB</td>
+        </tr>
+    </tbody>
+</table>
 ```
